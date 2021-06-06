@@ -5,10 +5,9 @@ FrameworkBundle 4.4 with Symfony messenger 5.3 triggers an exception on Messenge
 ```
 docker-compose up
 composer install
-bin/console 
 ```
 
-bin/console will trigger the error, that is fixed by the PR: https://github.com/symfony/symfony/pull/41553
+composer install will trigger the error when clearing the cache, that is fixed by the PR: https://github.com/symfony/symfony/pull/41553
 The PR fixes this behavior and makes Symfony Messenger 5.3 BC with FrameworkBundle 4.4.
 
 ## Generate a message to be consumed
